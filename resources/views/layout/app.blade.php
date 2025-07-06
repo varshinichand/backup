@@ -60,6 +60,7 @@
 
 <div class="wrapper">
     <!-- Sidebar -->
+     
     <div class="sidebar p-3">
         <h4 class="text-center">Super Admin Panel</h4>
         <hr>
@@ -80,12 +81,19 @@
 
 
         <a href="{{ route('superadmin.enrollments') }}">📋 Enrollments</a>
+        <!-- 🔒 Logout -->
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit" class="btn btn-danger w-100 mt-3">🚪 Logout</button>
+    </form>
     </div>
+    
 
     <!-- Content -->
     <div class="content">
         @yield('content')
     </div>
+    
 </div>
 
 <!-- Bootstrap Bundle (includes Popper for dropdowns) -->

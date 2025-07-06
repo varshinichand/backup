@@ -109,6 +109,12 @@ return [
     | confirmation screen. By default, the timeout lasts for three hours.
     |
     */
+'providers' => [
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\User::class,
+    ],
+],
 
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
