@@ -28,6 +28,10 @@
     </select>
   </div>
 </div>
+<div class="mb-3 d-flex gap-2">
+  <a href="{{ route('export.excel') }}" class="btn btn-success">Download Excel</a>
+  <a href="{{ route('export.pdf') }}" class="btn btn-danger">Download PDF</a>
+</div>
 
   <!-- TABLE -->
   <div class="table-responsive">

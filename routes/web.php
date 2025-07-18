@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Http\Controllers\EnrollmentController;
+
+
+Route::get('/export/excel', [EnrollmentController::class, 'exportExcel'])->name('export.excel');
+Route::get('/export/pdf', [EnrollmentController::class, 'exportPDF'])->name('export.pdf');
 
 /*
 |--------------------------------------------------------------------------
